@@ -3,53 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="ChurchFlow — Modern Church Management System for Kenyan churches. Manage members, tithes, events, ministries, and online services from one beautiful platform.">
-  <title>ChurchFlow | Modern Church Management System</title>
-  <!-- Google Fonts + Tailwind + Font Awesome -->
+  <meta name="description" content="Grace Life Church - Helping People Know God, Find Freedom, Discover Purpose, and Make a Difference. Join us in Nairobi for life-changing worship.">
+  <title>Grace Life Church | Modern Church in Nairobi</title>
+  <!-- Google Fonts + Tailwind + Font Awesome + Lightbox (simple) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* Premium design system - clean white/gold/navy, no dark mode */
+    /* Premium Church Design System - Warm, Elegant, Modern + enhanced modifications */
     :root {
-      --bg-main: #F8FAFC;
-      --bg-soft: #F1F5F9;
+      --bg-main: #FEFCF8;
+      --bg-soft: #F9F6EF;
       --bg-card: #FFFFFF;
-      --border-soft: #E2E8F0;
-      --text-main: #0F172A;
-      --text-muted: #475569;
-      --gold: #B8860B;
-      --gold-light: #D4A017;
-      --gold-glow: rgba(184, 134, 11, 0.08);
-      --navy-deep: #0B2B4A;
-      --shadow-premium: 0 20px 35px -12px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.02);
-      --shadow-glow: 0 20px 40px rgba(2, 6, 23, 0.12), 0 0 0 1px rgba(184, 134, 11, 0.1);
-      --transition-smooth: all 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      --border-soft: #EDE6D6;
+      --text-main: #1E2A3A;
+      --text-muted: #4A5B6E;
+      --gold: #C69C2E;
+      --gold-light: #DFB75A;
+      --gold-glow: rgba(198, 156, 46, 0.12);
+      --navy-deep: #13294B;
+      --shadow-premium: 0 25px 40px -12px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-glow: 0 20px 35px -10px rgba(198, 156, 46, 0.2), 0 0 0 1px rgba(198, 156, 46, 0.15);
+      --transition-smooth: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg-main);
       color: var(--text-main);
       scroll-behavior: smooth;
-      background-image: radial-gradient(circle at 0% 0%, rgba(184, 134, 11, 0.03), transparent 40%);
     }
 
-    h1, h2, h3, .font-display {
-      font-family: 'Sora', sans-serif;
-    }
+    h1, h2, h3, .font-display { font-family: 'Sora', sans-serif; }
 
-    /* Premium glass and card styles */
+    /* Glass & Card styles */
     .glass-premium {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 253, 245, 0.92);
       backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 245, 215, 0.7);
       box-shadow: var(--shadow-premium);
     }
 
@@ -57,311 +50,393 @@
       background: var(--bg-card);
       border: 1px solid var(--border-soft);
       transition: var(--transition-smooth);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      border-radius: 1.5rem;
     }
 
     .card-premium:hover {
-      transform: translateY(-8px);
+      transform: translateY(-6px);
       box-shadow: var(--shadow-glow);
-      border-color: rgba(184, 134, 11, 0.2);
+      border-color: var(--gold-light);
     }
 
     .gold-gradient {
-      background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
-      box-shadow: 0 10px 25px rgba(184, 134, 11, 0.25);
+      background: linear-gradient(105deg, #C69C2E 0%, #E0B354 100%);
+      box-shadow: 0 8px 20px rgba(198, 156, 46, 0.3);
       transition: var(--transition-smooth);
     }
 
     .gold-gradient:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(184, 134, 11, 0.35);
+      box-shadow: 0 15px 28px rgba(198, 156, 46, 0.4);
     }
 
     .nav-blur {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(203, 213, 225, 0.4);
-    }
-
-    /* Micro animations */
-    .hover-scale-icon i, .hover-scale-icon svg {
-      transition: transform 0.3s ease;
-    }
-    .hover-scale-icon:hover i {
-      transform: scale(1.1) rotate(-3deg);
+      background: rgba(255, 252, 245, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(198, 156, 46, 0.2);
     }
 
     .nav-link {
       position: relative;
+      font-weight: 500;
       transition: color 0.2s;
     }
     .nav-link::after {
       content: '';
       position: absolute;
-      bottom: -4px;
+      bottom: -5px;
       left: 0;
       width: 0%;
       height: 2px;
       background: var(--gold);
-      transition: width 0.3s ease;
+      transition: width 0.25s ease;
     }
-    .nav-link:hover::after {
+    .nav-link:hover::after { width: 100%; }
+
+    .hero-video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 20%, rgba(0,0,0,0.4) 0%, rgba(19,41,75,0.75) 100%);
+      z-index: 1;
     }
 
     .animate-fade-up {
       opacity: 0;
-      transform: translateY(25px);
-      animation: fadeUp 0.7s ease forwards;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
     }
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
     }
 
-    .stat-number {
-      font-family: 'Sora', monospace;
+    .badge-live {
+      background: rgba(220, 38, 38, 0.9);
+      box-shadow: 0 0 10px rgba(220,38,38,0.6);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 0.9; box-shadow: 0 0 0 0 rgba(220,38,38,0.5); }
+      70% { box-shadow: 0 0 0 8px rgba(220,38,38,0); }
+      100% { opacity: 1; box-shadow: 0 0 0 0 rgba(220,38,38,0); }
     }
 
-    .hero-glow {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(184,134,11,0.12), transparent 70%);
-      filter: blur(70px);
-      z-index: 0;
-      pointer-events: none;
+    /* Masonry / Gallery grid */
+    .masonry-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-img {
+      transition: transform 0.35s ease, box-shadow 0.2s;
+      cursor: pointer;
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    .gallery-img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.2);
     }
 
-    .badge-premium {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.25rem 1rem;
-      background: #FFF8ED;
-      border: 1px solid #FDE5B4;
-      border-radius: 40px;
-      color: var(--gold);
-      font-weight: 600;
-      font-size: 0.75rem;
-    }
-
-    .mobile-menu-open {
-      overflow: hidden;
-    }
-
-    /* Dashboard chart styles */
-    .bar-chart {
-      display: flex;
-      align-items: flex-end;
-      gap: 8px;
-    }
-    .bar {
+    /* custom tabs for sermons */
+    .sermon-tab-active {
       background: var(--gold);
-      border-radius: 8px 8px 4px 4px;
-      transition: height 0.6s ease;
+      color: white;
+      border-color: var(--gold);
+      box-shadow: 0 2px 8px rgba(198,156,46,0.3);
     }
 
-    /* section divider */
-    .section-divider {
-      border-top: 1px solid rgba(15, 23, 42, 0.05);
+    iframe {
+      border-radius: 1.5rem;
+    }
+
+    /* custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #F1EBDC; }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+    /* Lightbox modal (enhanced) */
+    .lightbox-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0.2s, opacity 0.2s ease;
+      cursor: pointer;
+    }
+    .lightbox-modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
+    .lightbox-img {
+      max-width: 90vw;
+      max-height: 85vh;
+      border-radius: 1rem;
+      box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+      border: 2px solid var(--gold);
+      cursor: default;
+    }
+    .close-lightbox {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2.5rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .close-lightbox:hover { color: var(--gold); transform: scale(1.1); }
+    
+    .ministry-img, .event-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .about-img {
+      object-fit: cover;
+      height: 500px;
+      width: 100%;
     }
   </style>
 </head>
-<body class="antialiased">
+<body>
 
-<!-- Navigation - removed dark mode toggle -->
+<!-- Navigation - full modern menu -->
 <nav class="nav-blur fixed w-full z-50 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
     <div class="flex justify-between items-center py-4">
-      <div class="flex items-center gap-2 hover-scale-icon">
+      <div class="flex items-center gap-2">
         <i class="fas fa-church text-2xl" style="color: var(--gold);"></i>
-        <span class="font-display font-bold text-xl tracking-tight text-[#0B2B4A]">ChurchFlow</span>
+        <span class="font-display font-bold text-xl tracking-tight text-[#13294B]">Grace Life Church</span>
       </div>
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#home" class="nav-link text-gray-700 hover:text-[#B8860B] font-medium">Home</a>
-        <a href="#features" class="nav-link text-gray-700 hover:text-[#B8860B] font-medium">Features</a>
-        <a href="#dashboard" class="nav-link text-gray-700 hover:text-[#B8860B] font-medium">Dashboard</a>
-        <a href="#ministries" class="nav-link text-gray-700 hover:text-[#B8860B] font-medium">Ministries</a>
-        <a href="#events" class="nav-link text-gray-700 hover:text-[#B8860B] font-medium">Events</a>
-        <a href="#contact" class="nav-link text-gray-700 hover:text-[#B8860B] font-medium">Contact</a>
-        <a href="#contact" class="gold-gradient px-5 py-2 rounded-full text-white font-semibold text-sm shadow-md transition">Get Demo</a>
+      <div class="hidden md:flex items-center space-x-7">
+        <a href="#home" class="nav-link text-gray-700 hover:text-[#C69C2E]">Home</a>
+        <a href="#about" class="nav-link text-gray-700 hover:text-[#C69C2E]">About</a>
+        <a href="#ministries" class="nav-link text-gray-700 hover:text-[#C69C2E]">Ministries</a>
+        <a href="#sermons" class="nav-link text-gray-700 hover:text-[#C69C2E]">Sermons</a>
+        <a href="#events" class="nav-link text-gray-700 hover:text-[#C69C2E]">Events</a>
+        <a href="#live" class="nav-link text-gray-700 hover:text-[#C69C2E]">Live</a>
+        <a href="#gallery" class="nav-link text-gray-700 hover:text-[#C69C2E]">Gallery</a>
+        <a href="#give" class="nav-link text-gray-700 hover:text-[#C69C2E]">Give</a>
+        <a href="#contact" class="gold-gradient px-5 py-2 rounded-full text-white font-semibold text-sm shadow-md">Plan Visit</a>
       </div>
-      <div class="flex md:hidden items-center gap-3">
-        <button id="mobileMenuBtn" class="text-2xl text-[#0B2B4A]"><i class="fas fa-bars"></i></button>
+      <div class="flex md:hidden gap-3">
+        <button id="mobileMenuBtn" class="text-2xl text-[#13294B]"><i class="fas fa-bars"></i></button>
       </div>
     </div>
   </div>
-  <!-- Mobile Menu -->
+  <!-- Mobile drawer -->
   <div id="mobileMenu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 md:hidden">
     <div class="flex justify-end p-6"><button id="closeMobileMenu" class="text-2xl"><i class="fas fa-times"></i></button></div>
-    <div class="flex flex-col items-center gap-8 text-xl font-medium mt-12">
-      <a href="#home" class="mobile-nav-link">Home</a>
-      <a href="#features" class="mobile-nav-link">Features</a>
-      <a href="#dashboard" class="mobile-nav-link">Dashboard</a>
-      <a href="#ministries" class="mobile-nav-link">Ministries</a>
-      <a href="#events" class="mobile-nav-link">Events</a>
-      <a href="#contact" class="mobile-nav-link">Contact</a>
-      <a href="#contact" class="gold-gradient px-8 py-3 rounded-full text-white">Book Demo</a>
+    <div class="flex flex-col items-center gap-6 text-xl font-medium mt-12">
+      <a href="#home" class="mobile-link">Home</a><a href="#about" class="mobile-link">About</a><a href="#ministries" class="mobile-link">Ministries</a>
+      <a href="#sermons" class="mobile-link">Sermons</a><a href="#events" class="mobile-link">Events</a><a href="#live" class="mobile-link">Live</a>
+      <a href="#gallery" class="mobile-link">Gallery</a><a href="#give" class="mobile-link">Give</a><a href="#contact" class="gold-gradient px-8 py-3 rounded-full text-white">Plan Visit</a>
     </div>
   </div>
 </nav>
 
 <main>
-  <!-- Hero Section with glow and premium badge -->
-  <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-28 px-5 max-w-7xl mx-auto overflow-hidden">
-    <div class="hero-glow top-20 -left-20"></div>
-    <div class="hero-glow bottom-0 right-0"></div>
-    <div class="grid md:grid-cols-2 gap-12 items-center relative z-2">
+  <!-- 1. Hero Section with video background -->
+  <section id="home" class="relative h-screen min-h-[650px] flex items-center justify-center overflow-hidden">
+    <video class="hero-video-bg" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1438032005730-c779502df39b?q=80&w=2070&auto=format">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-people-worshipping-in-a-church-32854-large.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="relative z-10 text-center px-5 max-w-4xl mx-auto text-white">
       <div class="animate-fade-up">
-        <span class="badge-premium mb-4 inline-flex"><i class="fas fa-hands-praying mr-2"></i> Digital Stewardship · Kenya</span>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mt-4 leading-tight">Empowering Modern Ministry Through <span class="text-[#B8860B]">Technology</span></h1>
-        <p class="text-[#475569] text-lg mt-6">All-in-one church management software for Kenyan churches — manage members, tithes, events, and online ministry from one powerful dashboard.</p>
-        <div class="flex flex-wrap gap-4 mt-8">
-          <a href="#contact" class="gold-gradient px-7 py-3 rounded-full text-white font-semibold shadow-lg transition"><i class="fas fa-calendar-check mr-2"></i>Book Demo</a>
-          <a href="#features" class="border border-gray-300 px-7 py-3 rounded-full font-semibold hover:border-[#B8860B] transition"><i class="fas fa-play-circle mr-2"></i>Explore Features</a>
-        </div>
-        <div class="grid grid-cols-3 gap-4 mt-12 bg-white/70 p-5 rounded-2xl backdrop-blur-sm border border-white/30 shadow-sm">
-          <div><p class="stat-number text-2xl md:text-3xl font-bold text-[#B8860B]">2,450+</p><p class="text-xs text-gray-500">Members managed</p></div>
-          <div><p class="stat-number text-2xl md:text-3xl font-bold text-[#B8860B]">KES 4.8M</p><p class="text-xs text-gray-500">Donations tracked</p></div>
-          <div><p class="stat-number text-2xl md:text-3xl font-bold text-[#B8860B]">124</p><p class="text-xs text-gray-500">Events hosted</p></div>
-        </div>
-      </div>
-      <div class="relative">
-        <div class="glass-premium rounded-3xl overflow-hidden shadow-2xl border">
-          <img src="https://placehold.co/700x500/0B2B4A/F8FAFC?text=ChurchFlow+Dashboard" alt="Church Dashboard Preview" class="w-full h-auto object-cover">
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight drop-shadow-lg">Welcome to Grace Life Church</h1>
+        <p class="text-xl md:text-2xl mt-6 font-light max-w-2xl mx-auto">Helping People Know God, Find Freedom, Discover Purpose, and Make a Difference.</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+          <a href="#live" class="gold-gradient px-8 py-3 rounded-full text-white font-semibold text-lg shadow-xl"><i class="fas fa-video mr-2"></i>Watch Live</a>
+          <a href="#contact" class="bg-white/20 backdrop-blur border border-white/40 px-8 py-3 rounded-full font-semibold text-white hover:bg-white/30 transition"><i class="fas fa-calendar-check mr-2"></i>Plan Your Visit</a>
+          <a href="#give" class="bg-white/20 backdrop-blur border border-white/40 px-8 py-3 rounded-full font-semibold text-white hover:bg-white/30"><i class="fas fa-hand-holding-heart mr-2"></i>Give Online</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features Section - premium cards -->
-  <section id="features" class="py-20 bg-[#F1F5F9]">
-    <div class="max-w-7xl mx-auto px-5">
-      <div class="text-center max-w-2xl mx-auto">
-        <span class="text-[#B8860B] font-semibold uppercase text-sm tracking-wide">Powerful Tools</span>
-        <h2 class="text-3xl md:text-4xl font-bold mt-2">Everything for Modern Church Operations</h2>
-        <p class="text-[#475569] mt-4">Streamline administration, grow engagement, and focus on ministry.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-16">
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-users text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Member Management</h3><p class="text-sm text-gray-500 mt-1">Central directory, families, groups</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-hand-holding-heart text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Tithes & Donations</h3><p class="text-sm text-gray-500">Track offerings, generate receipts</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-church text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Online Giving</h3><p class="text-sm text-gray-500">MPESA, cards, recurring gifts</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-video text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Sermon Archive</h3><p class="text-sm text-gray-500">Audio/video, notes, downloads</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-calendar-alt text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Event Registration</h3><p class="text-sm text-gray-500">Ticketing, reminders, check-in</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-users-between text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Ministry Groups</h3><p class="text-sm text-gray-500">Fellowships, small groups</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-fingerprint text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Attendance Tracking</h3><p class="text-sm text-gray-500">Check-ins, analytics</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-envelope-open-text text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">SMS & Email</h3><p class="text-sm text-gray-500">Broadcast, automation</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-calendar-week text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Volunteer Scheduling</h3><p class="text-sm text-gray-500">Rotas, service planning</p></div>
-        <div class="card-premium p-6 rounded-2xl hover-scale-icon"><i class="fas fa-chart-line text-3xl text-[#B8860B] mb-4"></i><h3 class="font-bold text-lg">Financial Reports</h3><p class="text-sm text-gray-500">Audit trail, giving insights</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Dashboard Preview - clean and realistic, no admin focus -->
-  <section id="dashboard" class="py-20 max-w-7xl mx-auto px-5">
-    <div class="text-center mb-12">
-      <span class="text-[#B8860B] font-semibold uppercase text-sm">Real-time insights</span>
-      <h2 class="text-3xl md:text-4xl font-bold">Church Dashboard Preview</h2>
-      <p class="text-[#475569] max-w-xl mx-auto mt-2">See how your congregation stays connected and informed.</p>
-    </div>
-    <div class="glass-premium rounded-3xl p-5 md:p-8 shadow-xl border">
-      <div class="grid lg:grid-cols-3 gap-6">
-        <div class="lg:col-span-2 space-y-5">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-white/60 rounded-xl p-4"><p class="text-xs text-gray-500">Weekly Attendance</p><p class="text-2xl font-bold">487 <span class="text-green-500 text-sm">↑12%</span></p><div class="h-1 w-full bg-gray-200 rounded-full mt-2"><div class="h-1 bg-[#B8860B] rounded-full w-3/4"></div></div></div>
-            <div class="bg-white/60 rounded-xl p-4"><p class="text-xs text-gray-500">Total Donations (Dec)</p><p class="text-2xl font-bold">KES 1.28M</p><i class="fas fa-chart-simple text-[#B8860B] mt-1"></i></div>
-          </div>
-          <div class="bg-white/60 rounded-xl p-4"><p class="font-semibold">📊 Weekly Attendance Trend</p><div class="bar-chart h-32 mt-3"><div class="bar w-full" style="height: 65%;"></div><div class="bar w-full" style="height: 80%;"></div><div class="bar w-full" style="height: 52%;"></div><div class="bar w-full" style="height: 90%;"></div><div class="bar w-full" style="height: 70%;"></div></div></div>
-          <div class="bg-white/60 rounded-xl p-4"><p class="font-semibold">📝 Recent Contributions</p><div class="space-y-2 mt-2 text-sm"><div class="flex justify-between"><span>Tithes offering</span><span class="font-medium">KES 78,000</span></div><div class="flex justify-between"><span>Building fund</span><span class="font-medium">KES 230,000</span></div><div class="flex justify-between"><span>Thanksgiving</span><span class="font-medium">KES 45,500</span></div></div></div>
+  <!-- 2. About Our Church + Pastor & Mission (real images) -->
+  <section id="about" class="py-24 max-w-7xl mx-auto px-5">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="order-2 lg:order-1">
+        <span class="text-[#C69C2E] font-semibold uppercase tracking-wide">Who We Are</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2 leading-tight">Our Mission & Vision</h2>
+        <div class="mt-6 space-y-4 text-[#4A5B6E] text-lg">
+          <p><i class="fas fa-check-circle text-[#C69C2E] mr-2"></i> <strong>Mission:</strong> To lead people into a life-changing relationship with Jesus Christ.</p>
+          <p><i class="fas fa-globe-africa text-[#C69C2E] mr-2"></i> <strong>Vision:</strong> A thriving church impacting Nairobi, Kenya, and the world with God’s love.</p>
+          <p><i class="fas fa-bible text-[#C69C2E] mr-2"></i> <strong>Beliefs:</strong> Rooted in Scripture, grace-filled, Spirit-led community.</p>
         </div>
-        <div class="space-y-5">
-          <div class="bg-white/60 rounded-xl p-4"><p class="font-semibold">📅 Upcoming Events</p><ul class="text-sm space-y-2 mt-2"><li>🔹 Sunday Worship - 2 days left</li><li>🔹 Youth Conference - 5 days</li><li>🔹 Prayer Night - Tomorrow</li></ul></div>
-          <div class="bg-white/60 rounded-xl p-4"><p class="font-semibold">🙏 Prayer Requests</p><p class="text-xs mt-1">"Healing for my mother" – Mary</p><p class="text-xs mt-1">"Job breakthrough" – Peter</p><button class="text-[#B8860B] text-xs mt-2">+ View all</button></div>
-          <div class="bg-white/60 rounded-xl p-4"><p class="font-semibold">👥 New Members (This week)</p><p class="text-2xl font-bold">12</p><span class="text-xs text-green-600">+3 from last week</span></div>
+        <div class="mt-8 flex gap-5 items-center bg-[#F9F6EF] p-6 rounded-2xl">
+          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop" class="w-20 h-20 rounded-full object-cover border-2 border-[#C69C2E]" alt="Pastor David Mwangi">
+          <div><p class="font-bold text-xl">Pastor David Mwangi</p><p class="text-gray-500">Senior Pastor, Grace Life Church</p><p class="text-sm italic mt-1">“We exist to build a family where every person encounters God’s presence.”</p></div>
         </div>
+        <p class="mt-4 text-gray-500">Established in 2010, our church has grown into a vibrant community of 2,000+ believers, committed to discipleship and outreach.</p>
+      </div>
+      <div class="order-1 lg:order-2"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&h=900&fit=crop" class="rounded-3xl shadow-2xl w-full object-cover h-[500px]" alt="Church congregation worship"></div>
+    </div>
+  </section>
+
+  <!-- 3. Service Times Cards (enhanced with icons) -->
+  <section class="py-16 bg-[#F9F6EF]">
+    <div class="max-w-7xl mx-auto px-5 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold">Service Times</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+        <div class="card-premium p-6 text-center"><i class="fas fa-sun text-3xl text-[#C69C2E] mb-3"></i><h3 class="font-bold text-xl">Sunday Worship</h3><p class="text-2xl font-semibold">8:00 AM</p></div>
+        <div class="card-premium p-6 text-center"><i class="fas fa-church text-3xl text-[#C69C2E] mb-3"></i><h3 class="font-bold text-xl">Second Service</h3><p class="text-2xl font-semibold">10:30 AM</p></div>
+        <div class="card-premium p-6 text-center"><i class="fas fa-user-friends text-3xl text-[#C69C2E] mb-3"></i><h3 class="font-bold text-xl">Midweek Service</h3><p class="text-2xl font-semibold">Wed 6:00 PM</p></div>
+        <div class="card-premium p-6 text-center"><i class="fas fa-praying-hands text-3xl text-[#C69C2E] mb-3"></i><h3 class="font-bold text-xl">Prayer Meeting</h3><p class="text-2xl font-semibold">Fri 5:30 PM</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Ministries Section - no admin staff -->
-  <section id="ministries" class="py-20 bg-[#F1F5F9]">
-    <div class="max-w-7xl mx-auto px-5">
-      <div class="text-center"><span class="text-[#B8860B] uppercase text-sm">Our Community</span><h2 class="text-3xl md:text-4xl font-bold mt-2">Active Ministries</h2></div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
-        <div class="card-premium rounded-2xl overflow-hidden"><img src="https://placehold.co/600x300/1E293B/FFFFFF?text=Youth+Ministry" class="h-40 w-full object-cover" alt="Youth Ministry"><div class="p-5"><i class="fas fa-music text-2xl text-[#B8860B]"></i><h3 class="font-bold text-xl mt-2">Youth Ministry</h3><p class="text-gray-500 text-sm">Empowering the next generation through discipleship and mentorship.</p></div></div>
-        <div class="card-premium rounded-2xl overflow-hidden"><img src="https://placehold.co/600x300/1E293B/FFFFFF?text=Worship+Team" class="h-40 w-full object-cover" alt="Worship Team"><div class="p-5"><i class="fas fa-hands-clapping text-2xl text-[#B8860B]"></i><h3 class="font-bold text-xl mt-2">Worship Team</h3><p class="text-gray-500 text-sm">Leading the congregation in spirit and truth every Sunday.</p></div></div>
-        <div class="card-premium rounded-2xl overflow-hidden"><img src="https://placehold.co/600x300/1E293B/FFFFFF?text=Men+Fellowship" class="h-40 w-full object-cover" alt="Men Fellowship"><div class="p-5"><i class="fas fa-person-walking-arrow-right text-2xl text-[#B8860B]"></i><h3 class="font-bold text-xl mt-2">Men Fellowship</h3><p class="text-gray-500 text-sm">Building godly men, fathers, and leaders in the community.</p></div></div>
-        <div class="card-premium rounded-2xl overflow-hidden"><img src="https://placehold.co/600x300/1E293B/FFFFFF?text=Women+Fellowship" class="h-40 w-full object-cover" alt="Women Fellowship"><div class="p-5"><i class="fas fa-female text-2xl text-[#B8860B]"></i><h3 class="font-bold text-xl mt-2">Women Fellowship</h3><p class="text-gray-500 text-sm">Supporting women in faith, family and purpose.</p></div></div>
-        <div class="card-premium rounded-2xl overflow-hidden"><img src="https://placehold.co/600x300/1E293B/FFFFFF?text=Missions" class="h-40 w-full object-cover" alt="Missions"><div class="p-5"><i class="fas fa-globe-africa text-2xl text-[#B8860B]"></i><h3 class="font-bold text-xl mt-2">Missions & Outreach</h3><p class="text-gray-500 text-sm">Spreading hope across Kenya and beyond.</p></div></div>
-        <div class="card-premium rounded-2xl overflow-hidden"><img src="https://placehold.co/600x300/1E293B/FFFFFF?text=Children+Ministry" class="h-40 w-full object-cover" alt="Children Ministry"><div class="p-5"><i class="fas fa-child text-2xl text-[#B8860B]"></i><h3 class="font-bold text-xl mt-2">Children Ministry</h3><p class="text-gray-500 text-sm">Nurturing faith in kids with fun Bible stories.</p></div></div>
-      </div>
+  <!-- 4. Ministries Section with real images -->
+  <section id="ministries" class="py-24 max-w-7xl mx-auto px-5">
+    <div class="text-center"><span class="text-[#C69C2E] uppercase text-sm">Get Involved</span><h2 class="text-4xl font-bold">Our Ministries</h2></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+      <div class="card-premium overflow-hidden"><img src="https://images.unsplash.com/photo-1542813756-615e9e0fae88?w=600&h=300&fit=crop" class="h-48 w-full object-cover ministry-img" alt="Children Ministry"><div class="p-5"><h3 class="font-bold text-2xl">Children Ministry</h3><p class="text-gray-600">Ages 3-12: Bible lessons, fun activities, and Jesus-centered learning.</p><div class="flex justify-between mt-3 text-sm"><span><i class="far fa-clock"></i> Sun 9AM</span><span><i class="fas fa-user"></i> Leader: Sis. Lucy</span></div><button class="mt-3 gold-gradient text-white px-4 py-1 rounded-full text-sm w-full join-ministry-btn">Join Ministry →</button></div></div>
+      <div class="card-premium overflow-hidden"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=300&fit=crop" class="h-48 w-full object-cover ministry-img" alt="Youth Ministry"><div class="p-5"><h3 class="font-bold text-2xl">Youth Ministry</h3><p class="text-gray-600">Teens & campus students: worship, mentorship, and discipleship.</p><div class="flex justify-between mt-3 text-sm"><span><i class="far fa-clock"></i> Sat 3PM</span><span><i class="fas fa-user"></i> Pastor Ian</span></div><button class="mt-3 gold-gradient text-white px-4 py-1 rounded-full text-sm w-full join-ministry-btn">Join Ministry →</button></div></div>
+      <div class="card-premium overflow-hidden"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=300&fit=crop" class="h-48 w-full object-cover ministry-img" alt="Young Adults"><div class="p-5"><h3 class="font-bold text-2xl">Young Adults</h3><p class="text-gray-600">Career growth, discipleship, and purpose discovery.</p><div class="flex justify-between mt-3 text-sm"><span><i class="far fa-clock"></i> Thu 7PM</span><span><i class="fas fa-user"></i> Leader: Mercy</span></div><button class="mt-3 gold-gradient text-white px-4 py-1 rounded-full text-sm w-full join-ministry-btn">Join Ministry →</button></div></div>
     </div>
   </section>
 
-  <!-- Online Services Section -->
-  <section class="py-20 max-w-7xl mx-auto px-5">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div><span class="text-[#B8860B] uppercase text-sm">Worship Anywhere</span><h2 class="text-3xl md:text-4xl font-bold mt-2">Live Streaming & Sermons</h2><p class="text-[#475569] mt-4">Join our online services, catch up with past sermons, and access daily devotionals.</p><div class="mt-6 space-y-3"><div class="flex items-center gap-3"><i class="fas fa-play-circle text-[#B8860B] text-xl"></i><span>Sunday Service: 9:00 AM & 11:00 AM EAT</span></div><div class="flex items-center gap-3"><i class="fas fa-microphone-alt text-[#B8860B] text-xl"></i><span>Podcast: Weekly Bible Study</span></div><div class="flex items-center gap-3"><i class="fas fa-praying-hands text-[#B8860B] text-xl"></i><span>Prayer request & counseling</span></div></div><a href="#" class="inline-block mt-6 gold-gradient px-6 py-2 rounded-full text-white"><i class="fab fa-youtube mr-2"></i> Watch Live</a></div>
-      <div class="glass-premium rounded-2xl p-6"><div class="aspect-video bg-gray-800 rounded-xl flex items-center justify-center text-white"><i class="fas fa-video text-4xl opacity-60"></i><span class="ml-3">Live Stream Preview</span></div><div class="mt-4 grid grid-cols-3 gap-2"><div class="bg-gray-100 p-2 rounded text-center text-xs">Sermon 1</div><div class="bg-gray-100 p-2 rounded text-center text-xs">Bible Study</div><div class="bg-gray-100 p-2 rounded text-center text-xs">Worship Night</div></div><div class="mt-5"><textarea placeholder="Share a prayer request..." class="w-full p-3 rounded-xl border border-gray-200"></textarea><button class="gold-gradient w-full py-2 rounded-full text-white mt-2">Submit Prayer</button></div></div>
-    </div>
-  </section>
-
-  <!-- Events Section -->
-  <section id="events" class="py-20 bg-[#F1F5F9]">
-    <div class="max-w-7xl mx-auto px-5"><div class="text-center"><span class="text-[#B8860B] uppercase text-sm">Join Us</span><h2 class="text-3xl md:text-4xl font-bold">Upcoming Events</h2></div>
-    <div class="grid md:grid-cols-3 gap-6 mt-12">
-      <div class="card-premium p-6 rounded-2xl"><div class="flex justify-between"><span class="text-[#B8860B] font-bold">Sun 15 Dec</span><i class="fas fa-calendar-alt text-gray-400"></i></div><h3 class="text-xl font-bold mt-2">Sunday Worship Service</h3><p>Celebration & Holy Communion</p><span class="text-sm text-gray-500">8:30 AM – Nairobi Central</span></div>
-      <div class="card-premium p-6 rounded-2xl"><div class="flex justify-between"><span class="text-[#B8860B] font-bold">Sat 21 Dec</span><i class="fas fa-calendar-alt text-gray-400"></i></div><h3 class="text-xl font-bold mt-2">Youth Conference 2025</h3><p>Ignite, worship, empowerment</p><span class="text-sm text-gray-500">9AM – KICC</span></div>
-      <div class="card-premium p-6 rounded-2xl"><div class="flex justify-between"><span class="text-[#B8860B] font-bold">Wed 25 Dec</span><i class="fas fa-calendar-alt text-gray-400"></i></div><h3 class="text-xl font-bold mt-2">Christmas Worship Night</h3><p>Carols and celebration</p><span class="text-sm text-gray-500">5PM – Church Grounds</span></div>
+  <!-- 5. Upcoming Events (enhanced with register alert + real images) -->
+  <section id="events" class="py-20 bg-[#F9F6EF]">
+    <div class="max-w-7xl mx-auto px-5"><div class="text-center"><h2 class="text-4xl font-bold">Upcoming Events</h2><p class="text-gray-500">Join us for life-transforming gatherings</p></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+      <div class="card-premium overflow-hidden p-0"><img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=250&fit=crop" class="w-full h-44 object-cover"><div class="p-6"><div class="flex justify-between items-start"><span class="bg-[#C69C2E]/20 text-[#C69C2E] font-bold px-3 py-1 rounded-full">June 28-30</span><i class="fas fa-ticket-alt text-gray-400"></i></div><h3 class="text-2xl font-bold mt-3">Youth Conference 2026</h3><p>🔥 Ignite your faith: worship, workshops, and evangelism.</p><div class="mt-4 flex gap-3 text-sm"><i class="fas fa-map-pin"></i> Nairobi Revival Center</div><button class="mt-4 gold-gradient w-full py-2 rounded-full text-white event-register-btn">Register →</button></div></div>
+      <div class="card-premium overflow-hidden p-0"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=250&fit=crop" class="w-full h-44 object-cover"><div class="p-6"><div class="flex justify-between"><span class="bg-[#C69C2E]/20 text-[#C69C2E] font-bold px-3 py-1 rounded-full">July 12</span></div><h3 class="text-2xl font-bold mt-3">Marriage Seminar</h3><p>Strengthen your covenant, practical tools for couples.</p><div class="mt-4 flex gap-3 text-sm"><i class="fas fa-map-pin"></i> Grace Life Auditorium</div><button class="mt-4 gold-gradient w-full py-2 rounded-full text-white event-register-btn">Register →</button></div></div>
+      <div class="card-premium overflow-hidden p-0"><img src="https://images.unsplash.com/photo-1446057032654-9d8885db76c6?w=600&h=250&fit=crop" class="w-full h-44 object-cover"><div class="p-6"><div class="flex justify-between"><span class="bg-[#C69C2E]/20 text-[#C69C2E] font-bold px-3 py-1 rounded-full">July 19</span></div><h3 class="text-2xl font-bold mt-3">Prayer Summit</h3><p>24 hours of nonstop prayer and worship.</p><div class="mt-4 flex gap-3 text-sm"><i class="fas fa-map-pin"></i> Church Sanctuary</div><button class="mt-4 gold-gradient w-full py-2 rounded-full text-white event-register-btn">Join Prayer →</button></div></div>
     </div></div>
   </section>
 
-  <!-- Testimonials from church members and pastors -->
-  <section class="py-20 max-w-7xl mx-auto px-5">
-    <div class="text-center"><span class="text-[#B8860B] uppercase text-sm">Church Leaders Love It</span><h2 class="text-3xl font-bold">Trusted by Ministries Across Kenya</h2></div>
-    <div class="grid md:grid-cols-3 gap-6 mt-12">
-      <div class="card-premium p-6 rounded-2xl"><i class="fas fa-quote-left text-[#B8860B] text-2xl opacity-50"></i><p class="mt-3 italic">"ChurchFlow streamlined our tithes and member tracking. Attendance rose 30%."</p><div class="mt-4 font-bold">Rev. Samuel K.</div><div class="text-xs text-gray-500">Nairobi Chapel</div></div>
-      <div class="card-premium p-6 rounded-2xl"><i class="fas fa-quote-left text-[#B8860B] text-2xl opacity-50"></i><p class="mt-3 italic">"MPESA integration and online giving changed our offerings. Incredible tool!"</p><div class="mt-4 font-bold">Pastor Esther M.</div><div class="text-xs text-gray-500">Mombasa Revival Church</div></div>
-      <div class="card-premium p-6 rounded-2xl"><i class="fas fa-quote-left text-[#B8860B] text-2xl opacity-50"></i><p class="mt-3 italic">"Scheduling and groups helped us organize over 200 members seamlessly."</p><div class="mt-4 font-bold">Elder James W.</div><div class="text-xs text-gray-500">Kisumu Christian Center</div></div>
+  <!-- 6. Sermons Section with Tabs (audio/video) and improved dynamic content -->
+  <section id="sermons" class="py-24 max-w-7xl mx-auto px-5">
+    <div class="text-center"><span class="text-[#C69C2E] uppercase">The Word</span><h2 class="text-4xl font-bold">Recent Sermons</h2></div>
+    <div class="flex justify-center gap-4 mt-8 flex-wrap">
+      <button class="sermon-tab-active px-5 py-2 rounded-full font-semibold transition" data-tab="recent">📺 Recent Sermons</button>
+      <button class="bg-gray-100 px-5 py-2 rounded-full font-semibold hover:bg-[#C69C2E] hover:text-white transition" data-tab="audio">🎧 Audio Sermons</button>
+      <button class="bg-gray-100 px-5 py-2 rounded-full font-semibold hover:bg-[#C69C2E] hover:text-white transition" data-tab="devotion">📖 Devotions</button>
+    </div>
+    <div id="sermonContent" class="grid md:grid-cols-2 gap-8 mt-10">
+      <div class="card-premium p-5 flex gap-4"><img src="https://images.unsplash.com/photo-1549068106-b024baf5062d?w=120&h=120&fit=crop" class="w-28 h-28 rounded-xl object-cover"><div><h3 class="text-xl font-bold">The Power of Faith</h3><p class="text-sm text-gray-500">Pastor David Mwangi · June 2026</p><div class="flex gap-3 mt-2"><button class="text-[#C69C2E] watch-sermon"><i class="fas fa-play-circle"></i> Watch</button><button class="download-notes"><i class="fas fa-download"></i> Notes</button></div></div></div>
+      <div class="card-premium p-5 flex gap-4"><img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=120&h=120&fit=crop" class="w-28 h-28 rounded-xl object-cover"><div><h3 class="text-xl font-bold">Walking in Freedom</h3><p class="text-sm text-gray-500">Pastor Lydia · June 2026</p><div class="flex gap-3 mt-2"><button class="text-[#C69C2E] watch-sermon"><i class="fas fa-play-circle"></i> Watch</button><button class="download-notes"><i class="fas fa-download"></i> Notes</button></div></div></div>
     </div>
   </section>
 
-  <!-- Gallery Section -->
-  <section class="py-20 bg-[#F1F5F9]"><div class="max-w-7xl mx-auto px-5"><div class="text-center"><span class="text-[#B8860B] uppercase">Moments of Worship</span><h2 class="text-3xl font-bold mt-1">Gallery</h2></div><div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10"><div class="rounded-xl overflow-hidden h-40"><img src="https://placehold.co/400x300/0B2B4A/FFFFFF?text=Worship" class="w-full h-full object-cover hover:scale-105 transition"></div><div class="rounded-xl overflow-hidden h-40"><img src="https://placehold.co/400x300/1E3A5F/FFFFFF?text=Conference" class="w-full h-full object-cover hover:scale-105 transition"></div><div class="rounded-xl overflow-hidden h-40"><img src="https://placehold.co/400x300/2C5F7A/FFFFFF?text=Outreach" class="w-full h-full object-cover hover:scale-105 transition"></div><div class="rounded-xl overflow-hidden h-40"><img src="https://placehold.co/400x300/4B6F8C/FFFFFF?text=Choir" class="w-full h-full object-cover hover:scale-105 transition"></div></div></div></section>
+  <!-- 7. Live Broadcast Section -->
+  <section id="live" class="py-20 bg-[#13294B] text-white">
+    <div class="max-w-6xl mx-auto px-5 text-center"><span class="badge-live inline-flex items-center gap-2 px-4 py-1 rounded-full text-sm bg-red-600 text-white"><i class="fas fa-circle text-xs"></i> 🔴 LIVE NOW</span><h2 class="text-3xl md:text-5xl font-bold mt-4">Sunday Worship Service</h2><p class="text-xl">Join us in worship — Nairobi & World</p>
+    <div class="mt-8 aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl"><iframe class="w-full h-full" src="https://www.youtube.com/embed/JGW9O6iWiMk?autoplay=0" title="Live Church Service" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div class="flex gap-4 justify-center mt-6"><a href="#" class="bg-white/20 px-6 py-2 rounded-full flex items-center gap-2 hover:bg-white/30 transition"><i class="fab fa-youtube"></i> Watch on YouTube</a><a href="#" class="bg-white/20 px-6 py-2 rounded-full flex items-center gap-2 hover:bg-white/30 transition"><i class="fab fa-facebook"></i> Watch on Facebook</a></div></div>
+  </section>
 
-  <!-- Strong CTA Strip Before Footer (navy) -->
-  <section class="py-20 bg-[#0B2B4A] text-white text-center rounded-t-[3rem]">
-    <div class="max-w-3xl mx-auto px-5">
-      <h2 class="text-3xl md:text-4xl font-bold">Ready to Transform Your Ministry?</h2>
-      <p class="text-gray-200 mt-4 text-lg">Join churches already using ChurchFlow to digitize operations and grow impact.</p>
-      <div class="mt-8"><a href="#contact" class="gold-gradient px-8 py-3 rounded-full text-white font-semibold text-lg shadow-xl inline-flex items-center gap-2"><i class="fas fa-arrow-right"></i> Request Free Demo</a></div>
-      <div class="flex justify-center gap-8 mt-12 text-sm"><span><i class="fas fa-check-circle text-[#D4A017]"></i> MPESA Ready</span><span><i class="fas fa-shield-alt text-[#D4A017]"></i> Secure Platform</span><span><i class="fas fa-headset text-[#D4A017]"></i> Church Support</span></div>
+  <!-- 8. Online Giving Section -->
+  <section id="give" class="py-24 max-w-7xl mx-auto px-5">
+    <div class="text-center"><span class="text-[#C69C2E] uppercase">Support God's Work</span><h2 class="text-4xl font-bold">Online Giving</h2></div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+      <div class="card-premium p-6 text-center"><i class="fas fa-tithe text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold mt-2">Tithe</h3><p>Support God's work through faithful tithing.</p><div class="bg-gray-100 p-2 rounded mt-3 text-sm">Paybill: 123456 · Acc: TITHE</div></div>
+      <div class="card-premium p-6 text-center"><i class="fas fa-gift text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold mt-2">Offering</h3><p>Support ministry activities and missions.</p><button class="mt-3 gold-gradient text-white px-4 py-1 rounded-full w-full give-offering-btn">Give Offering</button></div>
+      <div class="card-premium p-6 text-center"><i class="fas fa-building text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold mt-2">Building Fund</h3><p>Help us expand the kingdom house.</p><button class="mt-3 gold-gradient text-white px-4 py-1 rounded-full w-full give-building-btn">Donate Now</button></div>
+      <div class="card-premium p-6 text-center"><i class="fas fa-globe text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold mt-2">Missions Fund</h3><p>Outreach programs across Kenya.</p><div class="flex justify-center gap-2 text-2xl mt-2"><i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><span class="text-sm">M-Pesa</span></div><button class="mt-3 gold-gradient text-white px-4 py-1 rounded-full w-full give-missions-btn">Give Securely</button></div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- 9. Gallery with stunning real images (Unsplash high-quality) -->
+  <section id="gallery" class="py-20 bg-[#F9F6EF]"><div class="max-w-7xl mx-auto px-5"><div class="text-center"><h2 class="text-4xl font-bold">Moments of Worship</h2><p class="text-gray-500">Sunday Services · Conferences · Outreach</p></div><div class="masonry-grid mt-12" id="galleryGrid">
+    <img src="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=500&h=350&fit=crop" class="gallery-img rounded-2xl" data-full="https://images.unsplash.com/photo-1438032005730-c779502df39b?w=1200&h=800&fit=crop" alt="Worship night">
+    <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=500&h=450&fit=crop" class="gallery-img rounded-2xl" data-full="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1200&h=1000&fit=crop" alt="Youth event praise">
+    <img src="https://images.unsplash.com/photo-1542813756-615e9e0fae88?w=500&h=350&fit=crop" class="gallery-img rounded-2xl" data-full="https://images.unsplash.com/photo-1542813756-615e9e0fae88?w=1200&h=800&fit=crop" alt="Children ministry">
+    <img src="https://images.unsplash.com/photo-1446057032654-9d8885db76c6?w=500&h=400&fit=crop" class="gallery-img rounded-2xl" data-full="https://images.unsplash.com/photo-1446057032654-9d8885db76c6?w=1200&h=1000&fit=crop" alt="Prayer outreach">
+    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=500&h=350&fit=crop" class="gallery-img rounded-2xl" data-full="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1200&h=800&fit=crop" alt="Conference worship">
+    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500&h=450&fit=crop" class="gallery-img rounded-2xl" data-full="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200&h=1000&fit=crop" alt="Marriage seminar">
+  </div></div></section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="lightbox-modal"><span class="close-lightbox">&times;</span><img id="lightboxImage" class="lightbox-img" src="" alt="Enlarged"></div>
+
+  <!-- 10. Testimonies -->
+  <section class="py-20 max-w-6xl mx-auto px-5"><div class="text-center"><h2 class="text-4xl font-bold">Testimonies</h2><p class="text-gray-500">God's faithfulness in our church family</p></div><div class="grid md:grid-cols-2 gap-8 mt-10"><div class="card-premium p-6 flex flex-col"><div class="flex gap-3 items-center"><i class="fas fa-quote-right text-4xl text-[#C69C2E]"></i><div><p class="italic">“God healed me from a chronic illness during Sunday service!”</p><p class="font-bold mt-2">– Grace W.</p></div></div><div class="mt-4"><i class="fab fa-youtube text-red-600"></i> <a href="#" class="hover:underline">Watch video testimony</a></div></div><div class="card-premium p-6 flex flex-col"><div class="flex gap-3"><i class="fas fa-quote-right text-4xl text-[#C69C2E]"></i><div><p class="italic">“God restored my marriage through the prayer ministry.”</p><p class="font-bold mt-2">– Samuel & Jane</p></div></div><div><button class="gold-gradient text-white px-6 py-2 rounded-full w-full mt-5 share-testimony-btn">Share Your Testimony →</button></div></div></div></section>
+
+  <!-- 11. Prayer Request -->
+  <section class="py-16 bg-[#F9F6EF]"><div class="max-w-3xl mx-auto px-5 text-center"><h2 class="text-3xl font-bold">Prayer Request</h2><p>We’re here to stand with you in prayer.</p><div class="bg-white p-8 rounded-2xl shadow-md mt-6"><input id="prayerName" type="text" placeholder="Your Name" class="w-full p-3 border rounded-xl mb-3"><input id="prayerPhone" type="tel" placeholder="Phone (optional)" class="w-full p-3 border rounded-xl mb-3"><textarea id="prayerMsg" rows="3" placeholder="Share your prayer request..." class="w-full p-3 border rounded-xl"></textarea><button id="submitPrayerBtn" class="gold-gradient w-full py-3 rounded-full text-white font-bold mt-4">Submit Prayer Request</button></div></div></section>
+
+  <!-- 12. Leadership & Contact -->
   <section id="contact" class="py-20 max-w-7xl mx-auto px-5">
-    <div class="glass-premium rounded-3xl p-8 md:p-12"><div class="grid md:grid-cols-2 gap-10"><div><h2 class="text-3xl font-bold">Let's Transform Your Ministry</h2><p class="mt-3 text-[#475569]">Get a custom church management demo, pricing, or deployment for your congregation.</p><div class="mt-6 space-y-4"><a href="https://wa.me/254746336294?text=I%20need%20a%20church%20management%20demo" class="flex items-center gap-3 text-[#25D366] font-semibold"><i class="fab fa-whatsapp text-2xl"></i> +254 746 336 294</a><div class="flex items-center gap-3"><i class="fas fa-envelope text-[#B8860B]"></i> churchflow@mministry.org</div><div><i class="fas fa-map-marker-alt text-[#B8860B]"></i> Karen, Nairobi, Kenya</div><div class="flex gap-4 mt-4"><i class="fab fa-facebook text-xl hover:text-[#B8860B] transition"></i><i class="fab fa-instagram text-xl hover:text-[#B8860B] transition"></i><i class="fab fa-youtube text-xl hover:text-[#B8860B] transition"></i></div></div></div><div><div class="bg-gray-200 rounded-xl h-48 flex items-center justify-center text-gray-500"><i class="fas fa-map mr-2"></i> Location Map (Nairobi)</div><div class="mt-4 text-center text-sm">Sunday Services: 8:30 AM | 11:00 AM | Wed 6 PM</div></div></div></div>
+    <div class="grid lg:grid-cols-2 gap-10"><div><h2 class="text-3xl font-bold">Church Leadership</h2><div class="grid grid-cols-2 gap-4 mt-5"><div class="card-premium p-3 text-center"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" class="w-20 h-20 mx-auto rounded-full object-cover"><p class="font-bold">Senior Pastor</p><p>David Mwangi</p></div><div class="card-premium p-3 text-center"><img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop" class="w-20 h-20 mx-auto rounded-full object-cover"><p class="font-bold">Associate Pastor</p><p>Ruth Omondi</p></div></div><div class="mt-8 space-y-1"><i class="fas fa-map-marker-alt w-6"></i> Karen Road, Nairobi, Kenya<br><i class="fas fa-phone w-6"></i> +254 700 123 456<br><i class="fab fa-whatsapp w-6"></i> +254 746 336 294<br><i class="fas fa-clock w-6"></i> Service Times: Sun 8AM & 10:30AM</div></div><div><div class="bg-gray-200 h-64 rounded-2xl flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1505763304964-0d88b449c9ed?w=800&h=400&fit=crop" class="w-full h-full object-cover" alt="Church location"></div><div class="flex gap-4 mt-6"><a href="#" class="gold-gradient px-5 py-2 rounded-full text-white">Directions</a><a href="#" class="border px-5 py-2 rounded-full hover:bg-gray-100">Contact Us</a></div></div></div>
   </section>
 
-  <footer class="border-t border-gray-200 py-12 text-center text-gray-500 text-sm"><div>© 2025 ChurchFlow — Empowering Kenyan Churches with Digital Solutions | Designed with ✝️</div></footer>
+  <footer class="border-t border-[#EDE6D6] py-10 text-center text-gray-500">© 2026 Grace Life Church — Helping People Know God, Find Freedom, Discover Purpose. All glory to God.</footer>
 </main>
 
 <script>
-  // Mobile Menu Logic
-  const mobileBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeMobile = document.getElementById('closeMobileMenu');
-  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-  function toggleMobile(open) { if(open) { mobileMenu.classList.remove('translate-x-full'); document.body.classList.add('mobile-menu-open'); } else { mobileMenu.classList.add('translate-x-full'); document.body.classList.remove('mobile-menu-open'); } }
-  mobileBtn?.addEventListener('click', () => toggleMobile(true));
-  closeMobile?.addEventListener('click', () => toggleMobile(false));
-  mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobile(false)));
+  // mobile menu
+  const mobileBtn = document.getElementById('mobileMenuBtn'), mobileMenu = document.getElementById('mobileMenu'), closeBtn = document.getElementById('closeMobileMenu');
+  function toggleMenu(open) { if(open) mobileMenu.classList.remove('translate-x-full'); else mobileMenu.classList.add('translate-x-full'); }
+  mobileBtn?.addEventListener('click', () => toggleMenu(true));
+  closeBtn?.addEventListener('click', () => toggleMenu(false));
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function(e) { const target = document.querySelector(this.getAttribute('href')); if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); } }));
 
-  // Smooth scroll for all anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function(e) { 
-    const target = document.querySelector(this.getAttribute('href')); 
-    if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } 
-  }));
+  // Sermon tabs dynamic
+  const tabs = document.querySelectorAll('[data-tab]');
+  const sermonDiv = document.getElementById('sermonContent');
+  tabs.forEach(btn => { btn.addEventListener('click', () => { tabs.forEach(t => { t.classList.remove('sermon-tab-active', 'bg-[#C69C2E]', 'text-white'); t.classList.add('bg-gray-100', 'text-gray-800'); }); btn.classList.remove('bg-gray-100'); btn.classList.add('sermon-tab-active', 'text-white'); 
+    if(btn.dataset.tab === 'audio') sermonDiv.innerHTML = `<div class="card-premium p-5"><i class="fas fa-podcast text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold mt-2">Faith that Moves Mountains (Audio)</h3><audio controls class="w-full mt-3 rounded"><source src="#" type="audio/mpeg"></audio><p class="text-sm mt-2">Psalm 34:4</p></div><div class="card-premium p-5"><i class="fas fa-headphones text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold mt-2">Walking in Authority (MP3)</h3><button class="gold-gradient mt-3 px-5 py-2 rounded-full text-sm audio-play-btn">Listen Now</button></div>`;
+    else if(btn.dataset.tab === 'devotion') sermonDiv.innerHTML = `<div class="card-premium p-6"><i class="fas fa-book-open text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold mt-2">Daily Devotional: Overcoming Fear</h3><p class="mt-1">Isaiah 41:10 – God's strength for today.</p><button class="mt-3 gold-gradient px-4 py-1 rounded text-sm">Read More</button></div><div class="card-premium p-6"><i class="fas fa-pray text-3xl text-[#C69C2E]"></i><h3 class="text-xl font-bold">Prayer & Fasting Guide</h3><button class="mt-3 gold-gradient px-4 py-1 rounded text-sm">Download PDF</button></div>`;
+    else sermonDiv.innerHTML = `<div class="card-premium p-5 flex gap-4"><img src="https://images.unsplash.com/photo-1549068106-b024baf5062d?w=120&h=120&fit=crop" class="w-28 h-28 rounded-xl object-cover"><div><h3 class="text-xl font-bold">The Power of Faith</h3><p>Pastor David · June 2026</p><button class="text-[#C69C2E] watch-sermon"><i class="fas fa-play-circle"></i> Watch</button></div></div><div class="card-premium p-5 flex gap-4"><img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=120&h=120&fit=crop" class="w-28 h-28 rounded-xl object-cover"><div><h3 class="text-xl font-bold">Walking in Freedom</h3><button class="text-[#C69C2E] watch-sermon"><i class="fas fa-play-circle"></i> Watch</button></div></div>`;
+    attachSermonEvents();
+  }); });
+  
+  function attachSermonEvents() {
+    document.querySelectorAll('.watch-sermon').forEach(el => el.addEventListener('click', () => alert("🎬 Sermon video will be available on YouTube Live replay.")));
+    document.querySelectorAll('.download-notes').forEach(el => el.addEventListener('click', () => alert("📄 Sermon notes PDF will be downloaded.")));
+    document.querySelectorAll('.audio-play-btn').forEach(el => el.addEventListener('click', () => alert("🎧 Audio sermon streaming link will open.")));
+  }
+  attachSermonEvents();
+
+  // Interactive alerts
+  document.querySelectorAll('.join-ministry-btn').forEach(btn => btn.addEventListener('click', () => alert("🙌 Thank you! A ministry leader will contact you soon.")));
+  document.querySelectorAll('.event-register-btn').forEach(btn => btn.addEventListener('click', () => alert("✅ Registration successful! We'll send you event details.")));
+  document.querySelectorAll('.give-offering-btn, .give-building-btn, .give-missions-btn').forEach(btn => btn.addEventListener('click', () => alert("🔐 Secure giving: M-Pesa Paybill 123456 or card options. God bless you!")));
+  document.getElementById('submitPrayerBtn')?.addEventListener('click', () => { let name = document.getElementById('prayerName').value || "Friend"; alert(`🙏 Thank you ${name}, our prayer team will pray over your request.`); document.getElementById('prayerMsg').value = ''; });
+  document.querySelector('.share-testimony-btn')?.addEventListener('click', () => alert("📝 Share your testimony: testimonies@gracelifechurch.org"));
+
+  // Gallery lightbox
+  const modal = document.getElementById('lightboxModal');
+  const lightboxImg = document.getElementById('lightboxImage');
+  const closeLightbox = document.querySelector('.close-lightbox');
+  const galleryImgs = document.querySelectorAll('.gallery-img');
+  galleryImgs.forEach(img => {
+    img.addEventListener('click', (e) => {
+      const fullSrc = img.getAttribute('data-full') || img.src;
+      lightboxImg.src = fullSrc;
+      modal.classList.add('active');
+    });
+  });
+  closeLightbox.addEventListener('click', () => modal.classList.remove('active'));
+  modal.addEventListener('click', (e) => { if(e.target === modal) modal.classList.remove('active'); });
 </script>
 </body>
 </html>
